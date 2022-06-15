@@ -3,31 +3,73 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MHRP-code</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, Maximum-scale=1,"
+    />
+    <title>QRcode-mh</title>
   </head>
-  <body>
-    <div
-      style="
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-      "
-    >
-      <canvas
-        width="100"
-        height="100"
-        style="border: 2px solid black"
-        id="canvas"
-      ></canvas>
-      <label>link web code qr "mhrp"</label>
-      <input
-        placeholder="ketik dan enter"
-        id="qrInput"
-        onchange="generateQR()"
-      />
-    </div>
+  <body style="background-color: #ffa500">
+    <center>
+      <div
+        style="
+          display: block;
+          padding-bottom: 50px;
+          margin-top: 15px;
+          width: 400px;
+          height: auto;
+          text-align: center;
+          display: block;
+          background: #ffffff21;
+          border-radius: 30px;
+          -webkit-border-radius: 30px;
+          -moz-border-radius: 30px;
+          -ms-border-radius: 30px;
+          -o-border-radius: 30px;
+        "
+      >
+        <div
+          style="
+            margin-top: 70px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+          "
+        >
+          <canvas
+            width="100"
+            height="100"
+            style="
+              border: 4px solid black;
+              margin-top: 50px;
+              border-radius: 10px;
+            "
+            id="canvas"
+          ></canvas>
+          <h2 style="margin-top: 10px; font-size: 20px; color: black">
+            QRCode Generator 🌤
+          </h2>
+          <input
+            style="
+              height: 30px;
+              width: 300px;
+              border: 2px solid black;
+              border-radius: 7px;
+            "
+            placeholder="                             ketik lalu enter"
+            id="qrInput"
+            onchange="generateQR()"
+          />
+          <label
+            style="margin-top: 10px; margin-bottom: 10px; text-align: center"
+            >petunjuk: ketik kata/link yang ingin anda jadikan CodeQR dan lanjut
+            tekan enter untuk menampilkan hasil codeQR</label
+          >
+          <span style="margin-top: 10px">@mhrp</span>
+        </div>
+      </div>
+    </center>
     <script src="qrcode/build/qrcode.js"></script>
     <script>
       function generateQR() {
